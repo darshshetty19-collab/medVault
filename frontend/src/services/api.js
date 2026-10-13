@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { auth } from '../firebase/config';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8005';
+const rawBase = import.meta.env.VITE_API_BASE_URL ?? import.meta.env.VITE_API_URL ?? 'http://localhost:8005';
+// If rawBase is '/api' or '/api/', normalize to empty string so requests remain /api/... without doubling
+const API_BASE = (rawBase === '/api' || rawBase === '/api/') ? '' : rawBase;
 
 if (import.meta.env.PROD) {
   console.log('🌐 [System] Neural Path Optimized: Connected to Global Backend');

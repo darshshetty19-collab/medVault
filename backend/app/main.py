@@ -48,6 +48,7 @@ def root():
     }
 
 @app.get("/health")
+@app.get("/api/health")
 def health_check():
     """Diagnostic endpoint for Render health monitoring."""
     from .firebase_config import firebase_admin

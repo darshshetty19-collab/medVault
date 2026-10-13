@@ -11,19 +11,16 @@ pnpm-debug.log*
 
 # Environment Variables & Secrets (strict - prevent accidental leakage)
 .env
-.env.*
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*
 *.env
 backend/.env*
 frontend/.env*
-*.pem
 *.key
+*.pem
 *.cert
+firebase*.json
 firebase-service-account*.json
-backend/firebase-service-account*.json
+backend/firebase*.json
 
 # Allow example environment files
 !.env.example

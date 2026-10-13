@@ -1,4 +1,5 @@
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const rawBase = import.meta.env.VITE_API_BASE_URL ?? import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
+export const API_BASE = (rawBase === '/api' || rawBase === '/api/') ? '' : rawBase;
 
 export const PATIENT_ID = 'patient_123';
 export const DOCTOR_ID = 'doc_456';
