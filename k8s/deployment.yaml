@@ -33,7 +33,7 @@ spec:
               value: "8080"
           envFrom:
             - secretRef:
-                name: backend-secrets
+                name: medvault-secrets
           resources:
             requests:
               cpu: 250m
