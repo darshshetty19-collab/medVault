@@ -19,8 +19,11 @@ frontend/.env*
 *.pem
 *.cert
 firebase*.json
+*firebase*.json
+*-adminsdk-*.json
 firebase-service-account*.json
 backend/firebase*.json
+backend/*-adminsdk-*.json
 
 # Allow example environment files
 !.env.example
