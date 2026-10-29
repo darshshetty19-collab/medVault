@@ -26,8 +26,8 @@ This document details the production architecture, build pipelines, and Kubernet
       Probes: /                         Probes: /health
 ```
 
-- **Cluster:** GKE Autopilot (`medvault-cluster`), Region: `asia-south1`, Project: `medvault-511505`.
-- **Artifact Registry:** `asia-south1-docker.pkg.dev/medvault-511505/medvault-repo/{backend,frontend}:latest`.
+- **Cluster:** GKE Autopilot (`medvault-cluster`), Region: `asia-south1`, Project: `project-5d074ea5-fe5a-455d-acd`.
+- **Artifact Registry:** `asia-south1-docker.pkg.dev/project-5d074ea5-fe5a-455d-acd/medvault-repo/{backend,frontend}:latest`.
 - **Ingress & Routing:** A single external IP handles all client traffic via Google Cloud HTTP(S) Load Balancer.
   - `/` &rarr; Frontend Service (Nginx serving React SPA, 2 replicas).
   - `/api` &rarr; Backend Service (FastAPI running on port 8080, 2 replicas).
@@ -70,7 +70,7 @@ Run all commands from the repository root (`~/medVault`):
 ### Build and Push Backend
 ```bash
 gcloud builds submit ./backend \
-  --tag asia-south1-docker.pkg.dev/medvault-511505/medvault-repo/backend:latest
+  --tag asia-south1-docker.pkg.dev/project-5d074ea5-fe5a-455d-acd/medvault-repo/backend:latest
 ```
 
 ### Build and Push Frontend

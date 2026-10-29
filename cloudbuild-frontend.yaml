@@ -5,7 +5,7 @@ steps:
       - '--build-arg'
       - 'VITE_API_URL=/api'
       - '-t'
-      - 'asia-south1-docker.pkg.dev/medvault-511505/medvault-repo/frontend:latest'
+      - 'asia-south1-docker.pkg.dev/project-5d074ea5-fe5a-455d-acd/medvault-repo/frontend:latest'
       - './frontend'
 images:
-  - 'asia-south1-docker.pkg.dev/medvault-511505/medvault-repo/frontend:latest'
+  - 'asia-south1-docker.pkg.dev/project-5d074ea5-fe5a-455d-acd/medvault-repo/frontend:latest'

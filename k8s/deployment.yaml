@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: asia-south1-docker.pkg.dev/medvault-511505/medvault-repo/backend:latest
+          image: asia-south1-docker.pkg.dev/project-5d074ea5-fe5a-455d-acd/medvault-repo/backend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -82,7 +82,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: asia-south1-docker.pkg.dev/medvault-511505/medvault-repo/frontend:latest
+          image: asia-south1-docker.pkg.dev/project-5d074ea5-fe5a-455d-acd/medvault-repo/frontend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
